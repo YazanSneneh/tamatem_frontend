@@ -2,7 +2,12 @@
 
 <section class="items-section">
     <article class="card" *ngFor="let item of items" [routerLink]="['/items', item.id]">
-        <img [src]="item.image.image" [alt]="item.name">
+        <ng-container *ngIf="item.image && item.image.image">
+            <img [src]="item.image.image" [alt]="item.name">
+        </ng-container>
+        <ng-container *ngIf="!item.image || !item.image.image">
+            <div class="placeholder-div">Item Image</div>
+        </ng-container>
 
         <div class="card-body">
             <h5> {{ item.name }}</h5>
