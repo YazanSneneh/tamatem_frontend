@@ -13,7 +13,9 @@
     <div class="item-details">
         <div *ngIf="isUserAuthenticated" class="edit-button" [routerLink]="['/items/edit', item.id]">
             <span>
-                <mat-icon class="material-symbols-outlined"> edit_square </mat-icon>
+                <span class="material-symbols-outlined">
+                    edit_square
+                    </span>
             </span>
             <span>Edit</span>
         </div>

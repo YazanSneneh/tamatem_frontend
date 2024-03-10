@@ -10,34 +10,29 @@ p {
 }
 
 .item-container {
-    border-radius: 16px 16px 0px 0px;
-    box-shadow: 0px 3px 6px #00000029;
     display: flex;
-    width: 1056px;
-    height: 628px;
+    max-width: 1056px;
     gap: 67px;
-    border-radius: 16px;
+    box-shadow: 0px 3px 6px #00000029;
     overflow: hidden;
+    border-radius: 16px;
 }
 
-.image-container{
+.image-container {
     min-width: 488px;
     max-width: 488px;
-    overflow: hidden;
     background: #BCBBCD;
-    color: white;
+    color: #707070;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.image-container > img {
+.image-container img {
     width: 100%;
 }
-
 .item-details {
-    width: 100%;
+    width: 480px;
     min-height: 628px;
     position: relative;
     display: flex;
@@ -46,22 +41,15 @@ p {
     padding:51px 45px 0 0;
 }
 
-.item-details > p {
-    line-height: 1.5;
-    font-size: 1.2em;
-}
-
-.edit-button{
-    margin: 20px !important;
+.edit-button {
     position: absolute;
-    top: 0;
-    right: 0%;
+    top: 28px;
+    right: 20px;
     display: flex;
     align-items: center;
     color: #878787;
     cursor: pointer;
 }
-
 .edit-button > span {
     padding: 2px;
 }
@@ -70,6 +58,53 @@ p {
     position: absolute;
     bottom: 0;
     right: 40px;
-    width: 465px;
+    width: 100%;
     height: 80px;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 200,
+    'opsz' 40
+}
+
+@media only screen and (max-width: 1300px) {
+    .cta-container {
+        position:static;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .item-container {
+        flex-direction: column;
+        gap: 16px;
+        max-width: 400px;
+    }
+
+    .image-container {
+        min-width: 100%;
+        min-height: 488px;
+    }
+
+
+    .item-details {
+        padding: 0 26px;
+        max-width: 400px;
+    }
+
+    .edit-button {
+        top: 0;
+        right:  5px;
+    }
+
+    .cta-container {
+        position:static;
+        width: 100%;
+    }
+}
+
