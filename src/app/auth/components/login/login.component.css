@@ -1,0 +1,98 @@
+.mat-form-field-suffix .mat-icon {
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #CBCCDA;
+    border-radius: 18px;
+    border: 1px solid #CBCCDA;
+    border-radius: 18px;
+    gap: 28px;
+    padding: 44px 95px 84px;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container a {
+    color: #576171;
+    font-weight: 500;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.logo-group img {
+    height: 61px;
+}
+
+.input {
+    width: 350px;
+    border-radius: 16px;
+}
+
+.login-button {
+    cursor: pointer;
+    padding-block: 20px;
+    background: #00805A;
+    color: #ffffff;
+    box-shadow: 0px 3px 12px #00805A79;
+    border: none;
+    border-radius: 10px;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background: #006641;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+    .input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .logo-group img {
+        height: 40px;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .input {
+        width: 100%;
+    }
+    .login-button {
+        padding-block: 15px;
+        font-size: 16px;
+    }
+}

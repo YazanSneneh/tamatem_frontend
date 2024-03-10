@@ -1,0 +1,25 @@
+<section>
+    <div class="logo-group">
+        <img src="../../../../assets/124091983.png" alt="logo.png">
+        <h1> tamatem plus </h1>
+    </div>
+
+    <form class="form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2>Login</h2>
+        <div class="input-container">
+            <mat-form-field class="input" appearance="outline" subscriptSizing="dynamic">
+                <input matInput [formControl]="loginForm.controls.username" type="text" placeholder="Username">
+            </mat-form-field>
+            <mat-form-field class="input" appearance="outline" subscriptSizing="dynamic">
+                <input matInput [formControl]="loginForm.controls.password" [type]="passwordVisible ? 'text' : 'password'" placeholder="Password">
+                <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                    {{ passwordVisible ? 'visibility_off' : 'visibility' }}
+                </mat-icon>
+            </mat-form-field>
+        </div>
+
+        <a href="">Forget your Password?</a>
+
+        <button class="login-button" type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+</section>

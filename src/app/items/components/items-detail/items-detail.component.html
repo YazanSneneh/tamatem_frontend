@@ -1,0 +1,22 @@
+<section>
+    <h1>Products Details</h1>
+
+    <div class="item-container">
+        
+        <div class="image-container">
+            <img [src]="item.image.image" [alt]="item.name">
+        </div>
+        <div class="item-details">
+            <div *ngIf="isUserAuthenticated" class="edit-button" [routerLink]="['/items/edit', item.id]">
+                <span>
+                    <mat-icon class="material-symbols-outlined"> edit_square </mat-icon>
+                </span>
+                <span>Edit</span>
+            </div>
+            <h2>{{ item.name }} </h2>
+            <p> {{ item.description }} </p>
+            <h3> {{ item.price}} </h3>
+            <app-label [label]="'CTA'" [customClass]="'cta-button'"></app-label>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+<h1>Products Page</h1>
+
+<section class="items-section">
+    <article class="card" *ngFor="let item of items" [routerLink]="['/items', item.id]">
+        <img [src]="item.image.image" [alt]="item.name">
+
+        <div class="card-body">
+            <h5> {{ item.name }}</h5>
+            <app-label [label]="item.price + '$'"> </app-label>
+        </div>
+    </article>
+</section>

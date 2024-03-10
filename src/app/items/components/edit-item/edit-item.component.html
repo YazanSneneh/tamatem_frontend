@@ -1,0 +1,17 @@
+<section>
+    <form class="form-container" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <h1>Update Item</h1>
+        <div class="input-container">
+            <mat-form-field class="input" appearance="outline" subscriptSizing="dynamic">
+                <input matInput [formControl]="editForm.controls.name" type="text" placeholder="Item Name">
+            </mat-form-field>
+            <mat-form-field class="input" appearance="outline" subscriptSizing="dynamic">
+                <input matInput [formControl]="editForm.controls.description" [type]="'text'" placeholder="Description" >
+            </mat-form-field>
+            <mat-form-field class="input" appearance="outline" subscriptSizing="dynamic">
+                <input matInput [formControl]="editForm.controls.price" [type]="'number'" placeholder="Price" >
+            </mat-form-field>
+        </div>
+        <button class="edit-button" type="submit" [disabled]="editForm.invalid">Edit Item</button>
+    </form>
+</section>
